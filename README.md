@@ -36,6 +36,6 @@ Execution of jmeter script:
             
 * Note:
     * Directory "TestResult" should be present on the current directory
-    * These is possiblity that product would not be available in the cart, so configure testData.csv file with the product available on the site.
+    * These is possiblity that product would not be available in the website, so configure testData.csv file with the product available on the site.
     * If product is not available then you will see error message "Product [<name-of-the-product> ] is currently out of stock" on console
 
