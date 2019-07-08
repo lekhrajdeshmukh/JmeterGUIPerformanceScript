@@ -28,9 +28,9 @@ Execution of jmeter script:
         jmeter -n -t SeleniumDemoStore-II_WhenProductAvailable_Parameterization.jmx -l TestResult/SeleniumDemoStore.jtl -e -o  TestResult/SeleniumDemoStoreResult/
         
         Where
-            -n : This switch indicates to execute test script in non-gui mode
-            -t : This switch indicated the name of the test script which used for execution
-            -l : This switch used to generate the result file in the jtl or csv format
-            -e : This switch used for extracting the test result
-            -o : This switch indicates the folder location where default jmeter test result will get created.
+            * -n : This switch indicates to execute test script in non-gui mode
+            * -t : This switch indicated the name of the test script which used for execution
+            * -l : This switch used to generate the result file in the jtl or csv format
+            * -e : This switch used for extracting the test result
+            * -o : This switch indicates the folder location where default jmeter test result will get created.
 
