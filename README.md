@@ -25,7 +25,7 @@ Execution of jmeter script:
     *  Open command prompt or terminal on your respective operating system
     *  Change the directory to apache Jmeter bin folder(If path is not configured on PATH(in windows) or in .bash_profile (On Linux) )    i.e.  "cd <path/to/apache/bin/folder>"
     *  Enter below command to execute and generate the csv file and default jmeter report
-        jmeter -n -t SeleniumDemoStore-II_WhenProductAvailable_Parameterization.jmx -l TestResult/SeleniumDemoStore.jtl -e -o  TestResult/SeleniumDemoStoreResult/
+        * jmeter -n -t SeleniumDemoStore-II_WhenProductAvailable_Parameterization.jmx -l TestResult/SeleniumDemoStore.jtl -e -o  TestResult/SeleniumDemoStoreResult/
         
         * Where
             * -n : This switch indicates to execute test script in non-gui mode
