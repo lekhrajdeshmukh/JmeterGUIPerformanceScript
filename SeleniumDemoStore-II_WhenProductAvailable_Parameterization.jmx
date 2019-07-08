@@ -547,10 +547,10 @@ vars.put(&quot;RESOURCE_PATH&quot;,RESOURCE_PATH);
           <hashTree/>
           <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
             <stringProp name="BeanShellAssertion.query">String expectedMessage = vars.get(&quot;OUT_OF_STOCK_MSG&quot;);
-print(&quot;expectedMessage: &quot;+expectedMessage);
+
 if (expectedMessage.equalsIgnoreCase(&quot;This product is currently out of stock&quot;))
 {
-	print(&quot;This product is currently out of stock&quot;);
+	print(&quot;Product [ &quot;+vars.get(&quot;PRODUCT_NAME&quot;)+&quot; ] is currently out of stock&quot;);
 	Failure = true;
 }
 </stringProp>
@@ -639,7 +639,7 @@ if (expectedMessage.equalsIgnoreCase(&quot;This product is currently out of stoc
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
             <stringProp name="TestPlan.comments">Recorded:16542ms</stringProp>
             <stringProp name="ConstantTimer.delay">100</stringProp>
-            <stringProp name="RandomTimer.range">500</stringProp>
+            <stringProp name="RandomTimer.range">15000</stringProp>
           </UniformRandomTimer>
           <hashTree/>
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -807,7 +807,7 @@ if (expectedMessage.equalsIgnoreCase(&quot;This product is currently out of stoc
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
             <stringProp name="TestPlan.comments">Recorded:12244ms</stringProp>
             <stringProp name="ConstantTimer.delay">100</stringProp>
-            <stringProp name="RandomTimer.range">500</stringProp>
+            <stringProp name="RandomTimer.range">15000</stringProp>
           </UniformRandomTimer>
           <hashTree/>
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -921,6 +921,12 @@ if (expectedMessage.equalsIgnoreCase(&quot;This product is currently out of stoc
             <stringProp name="RegexExtractor.default">NOT_FOUND_GIFT_MESSAGE_TO_1</stringProp>
             <stringProp name="RegexExtractor.match_number">-1</stringProp>
           </RegexExtractor>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="TestPlan.comments">Recorded:12244ms</stringProp>
+            <stringProp name="ConstantTimer.delay">100</stringProp>
+            <stringProp name="RandomTimer.range">15000</stringProp>
+          </UniformRandomTimer>
           <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${__threadNum}-ShippingMethodPage" enabled="true">
@@ -1043,6 +1049,12 @@ if (expectedMessage.equalsIgnoreCase(&quot;This product is currently out of stoc
             </collectionProp>
           </HeaderManager>
           <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="TestPlan.comments">Recorded:12244ms</stringProp>
+            <stringProp name="ConstantTimer.delay">100</stringProp>
+            <stringProp name="RandomTimer.range">15000</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${__threadNum}-PaymentPage" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -1108,6 +1120,12 @@ if (expectedMessage.equalsIgnoreCase(&quot;This product is currently out of stoc
             </collectionProp>
           </HeaderManager>
           <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="TestPlan.comments">Recorded:12244ms</stringProp>
+            <stringProp name="ConstantTimer.delay">100</stringProp>
+            <stringProp name="RandomTimer.range">15000</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${__threadNum}-SelectPaymentMethod" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -1139,7 +1157,7 @@ if (expectedMessage.equalsIgnoreCase(&quot;This product is currently out of stoc
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
             <stringProp name="TestPlan.comments">Recorded:10902ms</stringProp>
             <stringProp name="ConstantTimer.delay">100</stringProp>
-            <stringProp name="RandomTimer.range">500</stringProp>
+            <stringProp name="RandomTimer.range">15000</stringProp>
           </UniformRandomTimer>
           <hashTree/>
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -1343,10 +1361,10 @@ if (expectedMessage.equalsIgnoreCase(&quot;This product is currently out of stoc
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">3</stringProp>
+          <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">3</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">8</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">2</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -1354,12 +1372,12 @@ if (expectedMessage.equalsIgnoreCase(&quot;This product is currently out of stoc
       <hashTree>
         <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
           <collectionProp name="CookieManager.cookies"/>
-          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <boolProp name="CookieManager.clearEachIteration">true</boolProp>
         </CookieManager>
         <hashTree/>
         <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
-          <boolProp name="clearEachIteration">false</boolProp>
-          <boolProp name="useExpires">true</boolProp>
+          <boolProp name="clearEachIteration">true</boolProp>
+          <boolProp name="useExpires">false</boolProp>
         </CacheManager>
         <hashTree/>
         <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -1375,7 +1393,7 @@ if (expectedMessage.equalsIgnoreCase(&quot;This product is currently out of stoc
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="delimiter">;</stringProp>
           <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename">C:/MyFolder/Testing/personal/Performance/Jmeter/Practice/TestData/TestData.csv</stringProp>
+          <stringProp name="filename">TestData.csv</stringProp>
           <boolProp name="ignoreFirstLine">true</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
@@ -1430,7 +1448,7 @@ if (expectedMessage.equalsIgnoreCase(&quot;This product is currently out of stoc
           <boolProp name="displaySystemProperties">false</boolProp>
         </DebugSampler>
         <hashTree/>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
