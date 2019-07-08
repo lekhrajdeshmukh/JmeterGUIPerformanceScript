@@ -34,5 +34,8 @@ Execution of jmeter script:
             * -e : This switch used for extracting the test result
             * -o : This switch indicates the folder location where default jmeter test result will get created(Please pass absoulte path if you want to generate file to different folder otherwise it will create inside current path)
             
-* Note: Directory "TestResult/SeleniumDemoStoreResult" should be present on the current directory
+* Note:
+    * Directory "TestResult" should be present on the current directory
+    * These is possiblity that product would not be available in the cart, so configure testData.csv file with the product available on the site.
+    * If product is not available then you will see error message "Product [<name-of-the-product> ] is currently out of stock" on console
 
